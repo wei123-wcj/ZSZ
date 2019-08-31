@@ -1,0 +1,9 @@
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.dll
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\bin\Debug\ZSZ.IService.pdb
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csproj.CoreCompileInputs.cache
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.dll
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.pdb
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\bin\Debug\ZSZ.DTO.dll
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\bin\Debug\ZSZ.DTO.pdb
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csprojAssemblyReference.cache
+E:\Desktop\掌上组\ZSZ\ZSZ.IService\obj\Debug\ZSZ.IService.csproj.CopyComplete

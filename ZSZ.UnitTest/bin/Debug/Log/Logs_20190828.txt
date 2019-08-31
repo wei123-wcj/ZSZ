@@ -1,0 +1,806 @@
+2019-08-28 22:55:29,664 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Opened connection at 2019/8/28/周三 22:55:29 +08:00
+
+2019-08-28 22:55:29,664 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2019-08-28 22:55:29,664 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:29,711 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 22:55:29 +08:00
+
+2019-08-28 22:55:35,904 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 6186 ms with result: 17
+
+2019-08-28 22:55:35,904 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:35,904 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Closed connection at 2019/8/28/周三 22:55:35 +08:00
+
+2019-08-28 22:55:37,121 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Opened connection at 2019/8/28/周三 22:55:37 +08:00
+
+2019-08-28 22:55:39,742 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2019-08-28 22:55:39,742 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:39,820 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- p__linq__0: 'ZSZ.Service.MyContext' (Type = String, Size = 4000)
+
+2019-08-28 22:55:39,820 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 22:55:39 +08:00
+
+2019-08-28 22:55:42,940 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 3131 ms with result: SqlDataReader
+
+2019-08-28 22:55:42,940 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:42,971 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Closed connection at 2019/8/28/周三 22:55:42 +08:00
+
+2019-08-28 22:55:42,986 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Opened connection at 2019/8/28/周三 22:55:42 +08:00
+
+2019-08-28 22:55:43,049 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2019-08-28 22:55:43,049 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:43,049 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- p__linq__0: 'ZSZ.Service.MyContext' (Type = String, Size = 4000)
+
+2019-08-28 22:55:43,049 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 22:55:43 +08:00
+
+2019-08-28 22:55:44,078 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1021 ms with result: SqlDataReader
+
+2019-08-28 22:55:44,078 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:44,094 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Closed connection at 2019/8/28/周三 22:55:44 +08:00
+
+2019-08-28 22:55:44,593 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Opened connection at 2019/8/28/周三 22:55:44 +08:00
+
+2019-08-28 22:55:45,436 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Started transaction at 2019/8/28/周三 22:55:45 +08:00
+
+2019-08-28 22:55:45,748 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句INSERT [dbo].[T_Cities]([Name], [CreateDateTime], [IsDeleted])
+VALUES (@0, @1, @2)
+SELECT [Id]
+FROM [dbo].[T_Cities]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+2019-08-28 22:55:45,748 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:45,748 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- @0: 'fhds' (Type = String, Size = 20)
+
+2019-08-28 22:55:45,748 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- @1: '2019/8/28/周三 22:55:17' (Type = DateTime2)
+
+2019-08-28 22:55:45,748 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- @2: 'False' (Type = Boolean)
+
+2019-08-28 22:55:45,748 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 22:55:45 +08:00
+
+2019-08-28 22:55:55,390 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 9648 ms with result: SqlDataReader
+
+2019-08-28 22:55:55,390 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 22:55:55,999 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Committed transaction at 2019/8/28/周三 22:55:55 +08:00
+
+2019-08-28 22:55:55,999 [13] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Closed connection at 2019/8/28/周三 22:55:55 +08:00
+
+2019-08-28 23:02:58,532 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Opened connection at 2019/8/28/周三 23:02:58 +08:00
+
+2019-08-28 23:02:58,550 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Started transaction at 2019/8/28/周三 23:02:58 +08:00
+
+2019-08-28 23:02:58,552 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_AdminLogs] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [AdminUserId] [bigint] NOT NULL,
+    [Message] [nvarchar](max) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_AdminLogs] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:58,552 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,553 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:58 +08:00
+
+2019-08-28 23:02:58,914 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 358 ms with result: -1
+
+2019-08-28 23:02:58,915 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,915 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_AdminUsers] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [PhoneNum] [varchar](20) NOT NULL,
+    [PasswordHash] [varchar](100) NOT NULL,
+    [PasswordSalt] [varchar](20) NOT NULL,
+    [Email] [varchar](30) NOT NULL,
+    [CityId] [bigint],
+    [LoginErrorTimes] [int] NOT NULL,
+    [LastLoginErrorDateTime] [datetime],
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_AdminUsers] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:58,915 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,915 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:58 +08:00
+
+2019-08-28 23:02:58,938 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 22 ms with result: -1
+
+2019-08-28 23:02:58,938 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,938 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Cities] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](20) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Cities] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:58,938 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,938 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:58 +08:00
+
+2019-08-28 23:02:58,941 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 2 ms with result: -1
+
+2019-08-28 23:02:58,941 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,941 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Roles] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Roles] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:58,941 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,941 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:58 +08:00
+
+2019-08-28 23:02:58,945 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 3 ms with result: -1
+
+2019-08-28 23:02:58,945 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,945 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Permissions] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Description] [nvarchar](1024),
+    [Name] [nvarchar](50) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Permissions] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:58,946 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:58,946 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:58 +08:00
+
+2019-08-28 23:02:59,003 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 57 ms with result: -1
+
+2019-08-28 23:02:59,004 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,004 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Attachments] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [IconName] [varchar](50) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Attachments] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,004 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,004 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,006 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,006 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,006 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Houses] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [CommunityId] [bigint] NOT NULL,
+    [RoomTypeId] [bigint] NOT NULL,
+    [Address] [nvarchar](128) NOT NULL,
+    [MonthRent] [int] NOT NULL,
+    [StatusId] [bigint] NOT NULL,
+    [Area] [decimal](18, 2) NOT NULL,
+    [DecorateStatusId] [bigint] NOT NULL,
+    [TotalFloorCount] [int] NOT NULL,
+    [FloorIndex] [int] NOT NULL,
+    [TypeId] [bigint] NOT NULL,
+    [Direction] [nvarchar](20) NOT NULL,
+    [LookableDateTime] [datetime] NOT NULL,
+    [CheckInDateTime] [datetime] NOT NULL,
+    [OwnerName] [nvarchar](20) NOT NULL,
+    [OwnerPhoneNum] [varchar](20) NOT NULL,
+    [Description] [nvarchar](max),
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Houses] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,006 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,006 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,046 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 39 ms with result: -1
+
+2019-08-28 23:02:59,046 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,046 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Communities] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](20) NOT NULL,
+    [RegionId] [bigint] NOT NULL,
+    [Location] [nvarchar](1024) NOT NULL,
+    [Traffic] [nvarchar](max),
+    [BuiltYear] [int],
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Communities] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,046 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,046 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,049 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 2 ms with result: -1
+
+2019-08-28 23:02:59,049 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,049 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Regions] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [CityId] [bigint] NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Regions] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,049 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,050 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,051 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,052 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,052 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_IdNames] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [TypeName] [nvarchar](1024) NOT NULL,
+    [Name] [nvarchar](1024) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_IdNames] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,052 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,052 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,081 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 28 ms with result: -1
+
+2019-08-28 23:02:59,081 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,081 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_HousePics] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [HouseId] [bigint] NOT NULL,
+    [Url] [nvarchar](1024) NOT NULL,
+    [ThumbUrl] [nvarchar](1024) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_HousePics] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,081 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,081 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,083 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,083 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,083 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_HouseAppointments] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [UserId] [bigint],
+    [Name] [nvarchar](20) NOT NULL,
+    [PhoneNum] [varchar](20) NOT NULL,
+    [VisitDate] [datetime] NOT NULL,
+    [HouseId] [bigint] NOT NULL,
+    [Status] [nvarchar](20) NOT NULL,
+    [FollowAdminUserId] [bigint],
+    [FollowDateTime] [datetime],
+    [RowVersion] rowversion NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_HouseAppointments] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,083 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,084 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,100 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 16 ms with result: -1
+
+2019-08-28 23:02:59,101 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,101 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Users] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [PhoneNum] [varchar](20) NOT NULL,
+    [PasswordHash] [nvarchar](100) NOT NULL,
+    [PasswordSalt] [nvarchar](20) NOT NULL,
+    [LoginErrorTimes] [int] NOT NULL,
+    [LastLoginErrorDateTime] [datetime],
+    [CityId] [bigint],
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Users] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,101 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,101 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,131 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 29 ms with result: -1
+
+2019-08-28 23:02:59,131 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,131 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_Settings] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](1024) NOT NULL,
+    [Value] [nvarchar](max) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Settings] PRIMARY KEY ([Id])
+)
+2019-08-28 23:02:59,131 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,132 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,134 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 2 ms with result: -1
+
+2019-08-28 23:02:59,135 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,135 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_RolePermissions] (
+    [RoleId] [bigint] NOT NULL,
+    [PermissionId] [bigint] NOT NULL,
+    CONSTRAINT [PK_dbo.T_RolePermissions] PRIMARY KEY ([RoleId], [PermissionId])
+)
+2019-08-28 23:02:59,135 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,135 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,162 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 26 ms with result: -1
+
+2019-08-28 23:02:59,162 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,162 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_AdminUserRoles] (
+    [AdminUserId] [bigint] NOT NULL,
+    [RoleId] [bigint] NOT NULL,
+    CONSTRAINT [PK_dbo.T_AdminUserRoles] PRIMARY KEY ([AdminUserId], [RoleId])
+)
+2019-08-28 23:02:59,162 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,162 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,171 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 8 ms with result: -1
+
+2019-08-28 23:02:59,172 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,172 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[T_HouseAttachments] (
+    [AttachmentId] [bigint] NOT NULL,
+    [HouseId] [bigint] NOT NULL,
+    CONSTRAINT [PK_dbo.T_HouseAttachments] PRIMARY KEY ([AttachmentId], [HouseId])
+)
+2019-08-28 23:02:59,172 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,172 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,173 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,174 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,174 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_AdminUserId] ON [dbo].[T_AdminLogs]([AdminUserId])
+2019-08-28 23:02:59,174 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,174 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,221 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 47 ms with result: -1
+
+2019-08-28 23:02:59,221 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,221 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_CityId] ON [dbo].[T_AdminUsers]([CityId])
+2019-08-28 23:02:59,222 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,222 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,223 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,223 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,223 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_CommunityId] ON [dbo].[T_Houses]([CommunityId])
+2019-08-28 23:02:59,223 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,223 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,224 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,225 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,225 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_RoomTypeId] ON [dbo].[T_Houses]([RoomTypeId])
+2019-08-28 23:02:59,225 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,225 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,228 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 3 ms with result: -1
+
+2019-08-28 23:02:59,229 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,229 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_StatusId] ON [dbo].[T_Houses]([StatusId])
+2019-08-28 23:02:59,229 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,229 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,230 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,230 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,230 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_DecorateStatusId] ON [dbo].[T_Houses]([DecorateStatusId])
+2019-08-28 23:02:59,230 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,231 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,232 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,232 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,232 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_TypeId] ON [dbo].[T_Houses]([TypeId])
+2019-08-28 23:02:59,232 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,232 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,233 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,233 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,234 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_RegionId] ON [dbo].[T_Communities]([RegionId])
+2019-08-28 23:02:59,234 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,234 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,235 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,235 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,235 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_CityId] ON [dbo].[T_Regions]([CityId])
+2019-08-28 23:02:59,235 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,235 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,264 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 28 ms with result: -1
+
+2019-08-28 23:02:59,264 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,264 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_HouseId] ON [dbo].[T_HousePics]([HouseId])
+2019-08-28 23:02:59,264 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,264 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,296 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 31 ms with result: -1
+
+2019-08-28 23:02:59,296 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,296 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_UserId] ON [dbo].[T_HouseAppointments]([UserId])
+2019-08-28 23:02:59,296 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,296 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,326 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 29 ms with result: -1
+
+2019-08-28 23:02:59,326 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,326 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_HouseId] ON [dbo].[T_HouseAppointments]([HouseId])
+2019-08-28 23:02:59,326 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,327 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,328 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,328 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,328 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_FollowAdminUserId] ON [dbo].[T_HouseAppointments]([FollowAdminUserId])
+2019-08-28 23:02:59,328 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,328 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,342 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 13 ms with result: -1
+
+2019-08-28 23:02:59,342 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,342 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_CityId] ON [dbo].[T_Users]([CityId])
+2019-08-28 23:02:59,342 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,342 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,343 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,343 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,344 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_RoleId] ON [dbo].[T_RolePermissions]([RoleId])
+2019-08-28 23:02:59,344 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,344 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,359 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 14 ms with result: -1
+
+2019-08-28 23:02:59,359 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,359 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_PermissionId] ON [dbo].[T_RolePermissions]([PermissionId])
+2019-08-28 23:02:59,359 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,359 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,369 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 9 ms with result: -1
+
+2019-08-28 23:02:59,370 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,370 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_AdminUserId] ON [dbo].[T_AdminUserRoles]([AdminUserId])
+2019-08-28 23:02:59,370 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,370 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,371 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,371 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,371 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_RoleId] ON [dbo].[T_AdminUserRoles]([RoleId])
+2019-08-28 23:02:59,371 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,371 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,372 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,373 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,373 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_AttachmentId] ON [dbo].[T_HouseAttachments]([AttachmentId])
+2019-08-28 23:02:59,373 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,373 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,379 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 5 ms with result: -1
+
+2019-08-28 23:02:59,379 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,379 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE INDEX [IX_HouseId] ON [dbo].[T_HouseAttachments]([HouseId])
+2019-08-28 23:02:59,379 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,379 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,391 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 11 ms with result: -1
+
+2019-08-28 23:02:59,391 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,391 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_AdminLogs] ADD CONSTRAINT [FK_dbo.T_AdminLogs_dbo.T_AdminUsers_AdminUserId] FOREIGN KEY ([AdminUserId]) REFERENCES [dbo].[T_AdminUsers] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,391 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,391 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,429 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 37 ms with result: -1
+
+2019-08-28 23:02:59,429 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,430 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_AdminUsers] ADD CONSTRAINT [FK_dbo.T_AdminUsers_dbo.T_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [dbo].[T_Cities] ([Id])
+2019-08-28 23:02:59,430 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,430 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,454 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 23 ms with result: -1
+
+2019-08-28 23:02:59,454 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,454 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_Communities_CommunityId] FOREIGN KEY ([CommunityId]) REFERENCES [dbo].[T_Communities] ([Id])
+2019-08-28 23:02:59,454 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,454 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,456 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,456 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,456 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_DecorateStatusId] FOREIGN KEY ([DecorateStatusId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2019-08-28 23:02:59,456 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,456 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,457 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,457 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,457 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_RoomTypeId] FOREIGN KEY ([RoomTypeId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2019-08-28 23:02:59,457 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,457 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,458 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,458 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,458 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_StatusId] FOREIGN KEY ([StatusId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2019-08-28 23:02:59,458 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,458 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,458 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_TypeId] FOREIGN KEY ([TypeId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Communities] ADD CONSTRAINT [FK_dbo.T_Communities_dbo.T_Regions_RegionId] FOREIGN KEY ([RegionId]) REFERENCES [dbo].[T_Regions] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,459 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,484 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 24 ms with result: -1
+
+2019-08-28 23:02:59,484 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,484 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Regions] ADD CONSTRAINT [FK_dbo.T_Regions_dbo.T_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [dbo].[T_Cities] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,484 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,484 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,486 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,486 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,486 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_HousePics] ADD CONSTRAINT [FK_dbo.T_HousePics_dbo.T_Houses_HouseId] FOREIGN KEY ([HouseId]) REFERENCES [dbo].[T_Houses] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,486 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,486 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,487 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,487 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,488 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_HouseAppointments] ADD CONSTRAINT [FK_dbo.T_HouseAppointments_dbo.T_AdminUsers_FollowAdminUserId] FOREIGN KEY ([FollowAdminUserId]) REFERENCES [dbo].[T_AdminUsers] ([Id])
+2019-08-28 23:02:59,488 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,488 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,489 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,489 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,489 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_HouseAppointments] ADD CONSTRAINT [FK_dbo.T_HouseAppointments_dbo.T_Houses_HouseId] FOREIGN KEY ([HouseId]) REFERENCES [dbo].[T_Houses] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,489 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,489 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,552 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 61 ms with result: -1
+
+2019-08-28 23:02:59,552 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,552 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_HouseAppointments] ADD CONSTRAINT [FK_dbo.T_HouseAppointments_dbo.T_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[T_Users] ([Id])
+2019-08-28 23:02:59,552 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,552 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,553 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,553 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,554 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_Users] ADD CONSTRAINT [FK_dbo.T_Users_dbo.T_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [dbo].[T_Cities] ([Id])
+2019-08-28 23:02:59,554 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,555 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,557 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,557 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,557 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_RolePermissions] ADD CONSTRAINT [FK_dbo.T_RolePermissions_dbo.T_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[T_Roles] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,557 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,557 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,558 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,558 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,558 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_RolePermissions] ADD CONSTRAINT [FK_dbo.T_RolePermissions_dbo.T_Permissions_PermissionId] FOREIGN KEY ([PermissionId]) REFERENCES [dbo].[T_Permissions] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,559 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,559 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,560 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,560 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,560 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_AdminUserRoles] ADD CONSTRAINT [FK_dbo.T_AdminUserRoles_dbo.T_AdminUsers_AdminUserId] FOREIGN KEY ([AdminUserId]) REFERENCES [dbo].[T_AdminUsers] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,560 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,560 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,561 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,561 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,561 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_AdminUserRoles] ADD CONSTRAINT [FK_dbo.T_AdminUserRoles_dbo.T_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[T_Roles] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,561 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,561 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,562 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 0 ms with result: -1
+
+2019-08-28 23:02:59,562 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,563 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_HouseAttachments] ADD CONSTRAINT [FK_dbo.T_HouseAttachments_dbo.T_Attachments_AttachmentId] FOREIGN KEY ([AttachmentId]) REFERENCES [dbo].[T_Attachments] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,563 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,563 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,564 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 1 ms with result: -1
+
+2019-08-28 23:02:59,564 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,564 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句ALTER TABLE [dbo].[T_HouseAttachments] ADD CONSTRAINT [FK_dbo.T_HouseAttachments_dbo.T_Houses_HouseId] FOREIGN KEY ([HouseId]) REFERENCES [dbo].[T_Houses] ([Id]) ON DELETE CASCADE
+2019-08-28 23:02:59,564 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,565 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,567 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 2 ms with result: -1
+
+2019-08-28 23:02:59,567 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,567 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句CREATE TABLE [dbo].[__MigrationHistory] (
+    [MigrationId] [nvarchar](150) NOT NULL,
+    [ContextKey] [nvarchar](300) NOT NULL,
+    [Model] [varbinary](max) NOT NULL,
+    [ProductVersion] [nvarchar](32) NOT NULL,
+    CONSTRAINT [PK_dbo.__MigrationHistory] PRIMARY KEY ([MigrationId], [ContextKey])
+)
+2019-08-28 23:02:59,567 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,568 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,604 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 36 ms with result: -1
+
+2019-08-28 23:02:59,604 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,605 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句INSERT [dbo].[__MigrationHistory]([MigrationId], [ContextKey], [Model], [ProductVersion])
+VALUES (N'201908281502568_InitialCreate', N'ZSZ.Service.MyContext',  0x1F8B0800000000000400ED5DDB6E1CB9117D0F907F68CC53B2703492BC093686B40BAD6C678558B6A0F12E92BC08AD1E4A6A6C5F26DD3DB68C205F96877C527E21EC3B6FC55B5F673C5878ED699245B278AA4816ABC8FFFDE7BF673F3C8781F30925A91F47E78B93A3E38583222F5EFBD1E3F9629B3DFCE1BBC50FDFFFF637676FD6E1B3F34B9DEF659E0F978CD2F3C553966D5E2D97A9F78442373D0A7D2F89D3F8213BF2E270E9AEE3E5E9F1F19F9727274B84492C302DC739BBDD46991FA2E207FE7919471EDA645B37B88ED72848ABEF3865555075DEBB214A37AE87CE17FF58FDE36885924FBE8716CE45E0BBB8092B143C2C1C378AE2CCCD70035FFD9CA25596C4D1E36A833FB8C1C72F1B84F33DB8418AAA86BF6AB3EBF6E1F834EFC3B22D5893F2B669168786044F5E564C59B2C5AD58BB689886D9F606B337FB92F7BA60DDF9E2621DFAD1BBF8B14C58386C95AF2E8324CF4EF1F7A8C8EDA3F4882EFEC22132BD685081C193FFF7C2B9DC06D93641E711DA66891BBC706EB6F781EFFD157DF918FF8AA2F3681B0464737183711AF5017FBA49E20D4AB22FB7E8A1EAC4D57AE12CE9724BB660538C285376EC2ACAFEF4EDC2798F2B77EF03D4A08160C22A8B13F41714A1C4CDD0FAC6CD329444390D54B16D29ADABE012865EA2AE544EE81AA5A9FB886A2218CA581C17CEB5FBFC0E458FD913CEE13E2F9CB7FE335AD75F2AC23F473E965E5C284BB6C8B8E2CB04E19EBFC67F3E62F1ACEB6F7F1B92BB4A5FA3006156D6947E8CE300B9919AD07BF793FF580C0AC4E385738B822247FAE46F4A1DC0E0F48EC8FC3689C3DB38E044A1CD73B78AB749AE543EC68A8C1FDDE41165749BCF96ADCCA9253127D34514DBF2075914D795FF5F223F7F3C1E427C6E9EE208BDDF86928A4F551557BF4D6B76D3F4739CAC7F72D32749ED27C7C356BF72836CFCCEBF095D3F9054FB72986A2F310C3948CB8B606DE2476F92244E727D9A12655F9E1AD7FFCE4DB39620ACB4775DE55F16E20E69FB5615DE9519194DCFA48BB53C9B49A4E1654DCC49A55A6DAC72C28D2C32285B59E6EA3411E51DB59C83DAA287E9475C9762FA512AC21D5EBD690330C7B02500DBA207005A017098F5CF3C00A8B57DE8555BD77A58AEAD6B9DAEDBD61B94847E9AC359DCD85608EEA8AC6D6BC539B8C905C8D669766909598A384BE020E8E2BA5EA3D44BFC4D6937922CFC4FBFD592F88356B1D02AF0F2CF5A465995A210653B534496B9DE538871666B8B60081C6474466273E5C551D78A2D37C6B317D89FE26D0A6DD8184CDFD579894580380BBF6903F2759A580B1A96F24A943D882A80DD380CB791C8B26388DADB380EF3F25DE95CACD7094A53D9DC7EFADD10FAE33A8EB2A75BCCB56E56AA151E976DDA990B58A5348A04797EE8060BE726C1FFAA0E2E310B569E9BD3336F222618E768E9A7A91F311283B7411C2797F1B62BF70A3A57D11A3D77A3D307125FFB98DF8A75E630868D7771FC6B9EBDB729E5F20979BF5E45BDD1FBF019EB9B496C3E45CDD39D3BE8ED3E744F2B777D59D14EF8BDAF2D381383620DA26D5CAFE73B61838905C31D91B36DAE3003B71012E73235B2D36A5AD95E36BBB8D1742E69CB99ACA6CD2F48DDF89EA4E538951C4DAECD4C3A070A61265344D40B172583DB8C62D6D6E952A636994CD9A98902F9E86B8CBAE5686B7150C63D25E740AEE99F00D5A2687B0C44973F6C29C4754DB22EB8458FB8E95D977CEF62CFEDCBB268BA624DDC8707DF1B7C55F1E3D60FB2BF23376116D8BBBE1629012054418CDCDED5595B4524CEC1A923205B27A554D2B03D17240A1FD491953A1AC886DF834565FE32077AAA90B8E4DC54B844FE808ECBD149C4AED6F9DF962246163E8898B8AEBC1E85980D356D4E54ED3C64D3CC88DE6C94ECECE84DF1831488EB2AB8D455E9FF9CC83C3B075B7C3E6DC3FB69AA9E8724290D19FD1931847B5CC8D2612FED179B4DEC475987D36E319983F403822B8A8399E146793ADBF92F7EEA67B9607716F25E346D6D291B99FF6FE320883FC3A1533AA56D7DDF6FE3CF95BC36DAD18FDC04633B8F48DC26098ABC2FD745DF8A8E53EC000E5D2D440A6FA337DB4245EFFAD4C00C263C49706AF48E2BCA4C1BCA12E289445DCCCA8E6FD233F13408E4D3ED053C2DCADA6E3A289A2361C2FEEE11741D82E70E7173F39D0E7B0B61B35B06F414C166E9DF30BFB03091C16ED7A727D03E27092253C58FE9848E69ABB615CA320C394BED46953E2838715D1319C87E7183ADACDEBD0EE887F07F91A6B1E717C3CAC6E790D24837E94DB47674E23B4B4E0BA27A30DF31F6FD0D463BFE75BEF886EBB5A28AC6EDA2AD820CA6A4A91F1F1D9D7015607141498E5737C03B8D140B205E24F1B2E5479EBF71038DB630653525331F99A61636E535DAA028172A0D6EEB545FCF287C139A9A18B5A1E2D2D99200901C57401C0634ECAAC0A976E0C920467D58A9823E5AFA7C1C95B41603968863DD74058109531E44D898E03A0BA69BB243747588B4B5D27B4418A610D7EF18F2447609893EEB4F58313DFB1095EADCB9F0CA6B8B2EDDD473D7FC3480F5F7BA2F0D26E9CC585A4C326A3A4DA08C55D3A833EE3C19D434F0E132214F94CF85811A03CFA5B5A6C6E9010976600424822333FBC914F01F8250A2722622A0C23A24EA4351E18AA409F6E91129EFC708B0948F964E035AD7C349D029F6598770A370606F6143C5DDE9E352EEFAAE8FFD9EF610D2E68C802E29BBB5141F199F3739BE9818031D10400107BD220D0855202AA17DC006C79AB84123034ECC7A9D46F01182D3418FF5AF90E20174B660E046F84219220E8C49D102F4F413AEAC1363E11318259DEA9BA3FFC97561130EA4A3A0F8D8A05EF51F1755349DE6639B32B2CE6319ADB5802342D7278795C1D43AE8943A9BA974D229D47CEA9CC39459355E5B3B0DA89966A29526D448A6DA68524D04456C83E65AD5D53084B596BB7DC9C02AAC8A12B7C1ACA954A97DB8A40261E0D0C5F446E0CA6B288CFA5E61FAE6F5FE0EFACC9A3896F86A8F974E83045E9FD34D0F90CB9E2184E43BAC2140BBC33B2E4567A603F58EEDC0747D2534DC24EC0E6D67E21C319D5FC4AEBA44C85C7E0DF5D0E8B33534454F383BCF634A369D87479C7CCB16E232192E8192AA01D7C517F49C09BC1D71E32A87C7B4727F636192535CA18C3D977F173FA60BA74C96786170A803C881B448B829885D162E9A0242A47254D0A8AE99E54890EE300A12A4F3134F88773652B188BCF08AE711B7C35190ABAFC3E22851EB1915A7AB132280DDEC319B8AE7C561A690EBD439B2824CB9BD1791A137FE3A0C2AEF9012F388B0E3EB902214084852A0BF15A42199311097CA95594485F191660811CA4720C9E44AC921B2CA1E146135A3A6FF69D3235A91708A56D3D7942057AB1276754E775D832DD0E5D43C6374DC27A9BE281C2889DE544A4DC21785B324418BEA4567F6008F01A86123F0A4940E34ED4BD91D38B4DFA48AD7B69C113EB3063047E957C9F747E65929625139E7ABB824F3A4D462BC8D98F197BF08244CEED1470B04E8D3478E753D71C9240BF4DF1B42DD40D74EF1CCD07130A33AA27031237B43AE0E24AC51F893A9196DC120E0B64D9E3F1A2E4EE00104EFE444F4A55E804918237768D2E37447DEB0377BCA1924F3D1017B0678E9D8B30AF0C82108364BC47E78C55DC3017049EA4EC2770772286139532E5255CC819C47947CEE88A0F6EA523976C43E0DE020735E0DF678E13C1886434A55A39E341949516FD2339AD454F5E960C300173D6162783C8017540BD6753A27A34667A3E4FA8BB42BC8D6748A73D0C1F488C6FD15007A0C4F4DBB9C9BB2BDA777FB2AD0E99F910EB570961ECEE9F3576B5E531DE7F5CDCBE1E73B0D7B87BEA943C3CAA1DEA78E69DB909D6EE843C74E1E07154248F24C85AE8EC96E0CF24DDAD972E53DA1D0AD3E9C2DF3CB90D026DBBA417E175290D609D7EE66931BE9DA92D51767B571BD7C13F587D5C2790E83283D5F3C65D9E6D5729916A4D3A3D0F792388D1FB2232F0E97EE3A5E9E1E1FFF797972B20C4B1A4B8F9A4BD8E383A6A60C2FAB1F11939AEF3ED6E8AD9FA4F9055BEEBD9B2B8CCB75C8656B8F1F007B645D8FE884811FBBDA545997AA2F02A52F6C60CE21F8739AAAF85BDCB37CE48B4E2256CB4A086012F963386E22B867E1320EB661049F41C1A5296F0D928CD48D03A6778DD2140F1D4DABF9A84F87BDE38024C7A6E95325AE3AA058D67EE6699D2D9991E34ED5388830E2CAE2CE0C951D2149D8E72D3129A3300C28CBEB3CC8F2E5177D0AED8D472495F6AB0125EA06238A1A95624EB1BC954844B14CD1A7F82674FD8026557D321038BF745BA004CD17BB32C054B84B8F48725CA2015DE0FE238A3C90E7A074B4954EB552B35538C4B1B7B9AE91159EAB9AF9EA01039D8AE9E185F07130C78BACF0012F33C58BFCA0590F359C438B3976D424864110F5B21E49864A382072CC75366195B45E68B33E51162B6D2589B9EAB4F6496AAA15CDD70316B5B1085ADBF560483AD49923505A7A18F051F73E50A32DBB1002A647C6B892E464B1AF30B5E69166DA2C527D343089B46F2E534691F6B33EAD36F092240587634A7A573CBE4C75ADF8623299B1F727D0339AEA76059832F7DA3249984BD4A74B3EBC4C9224BF1BB45280347394110F3053EC6B3F9BECBED92795E9ED379B6A20A9ECDBCA94B4B289FA74893796498AC467435A62C30F9334DD82EDAB9FE24807226B3303E3EE6D616B505198EB62ABBD868B9ADFC0CBB9604AED2BA0B48EA8BF1AE8C1FA514F4A11D61FF5E9108F76929488CF0739D337CC540E8CD6A6193210C2C238232D3E57E9EAC706FED563AF765DB2C51E153D638E3D79F161B05777845F0D9A62F060D2E1D36DB6D185AF6AA79D741B7665B99996101806854DD43A49020C6587E9148F2492348A0F06D2D0BCB4484943F3F58065332C53EE459D30CDC7FD59625B83D0301817F9AA98BBA974D7B2FD7918104F0692A488CFE36B80DA6F9CB73219D95BF80B6128B38BFABE18156DB16660D34C2C88EDE381B405B1FD7ED05EDADAAB9BFF5227D7A5F1BD96BE2E9FA31DF7F439ECF4FA90EF26A2DF56C4E9B87F732957949FABA1A17A388C9AEECB4F07F0F1C9B4BB3BEF805496A6AF3B50391CD1B961DF2295A748EEDBCFAD2164D724F0DCD342684E547CA70FD100EBB681571C69B5ADA564D6423690C178F081CB1CB4BCA1EBCC0A9767D8CB4CC05DE91D1096CC555CA76834FAD23B25460366F76187021AF5BC739AEC2A1F1C89478488B9F24848DBE16FA8F631FEF2C84ACB264AEE4AB4870017C9C46669269DEA4BF3BB8964AAA288A8F0A6A24F79B052D197B48A6862C38ACA2C0B07B7FD93BFCE438A565FD20C85477986A3D53F83CBC02F1C37EA0CD76EE43FA0342B5F595D9C1E1F7FB7702E02DF4DCB50B42A60EA157B1B9A5604D5C9CB3C820AADC3255BDC3C0E2BA792A66BEA1158FEC55A5928D2180FC6DEFB786D9F55022A7B15D6F0A5534A97D25571F7D415EE20E78B7F15455F39577FBB234ABF703E2478D85F39C7CEBF8D5BD14443952D883EB989F7E426BF0BDDE7DFF7F416EC1AFFCE7A790BF6DECF2CDF8115A30ADA96EF32ACCAD53F3D9AD43BC07F3C367FBA9C79B25D44F6D482ACE03D7611E9E241F61E5E5BEFA9D95534134CF3A5394DFA3174033D5016845440F9A2B3BC6AE069F8A201BD3E0C2FD2033A0DDC21AD02850DEDB542B110A11D1A5268CFB5D7436A3147ECD090CACD28BB3CB09423A8647C4F8E4FBF3555C35F3968E43131BB0C9A2106B68DB8819749FB8D17D05EB3CB50A14261CCD7AA6DE94E7B563282C6B8116DE14E6D68426F645AF6F43BF3FD781B8863BF0E6FC35C8CD95317EDC69C2278A7124EE4F9A11BE4E629FCAFB4B0339D60BEE4D63C9C7C6A31C7B1B13CC69D644974EA2C1702643F6E64E88F3D156BD1E8412C8848A17E770C7CBC5047DDCFC50975A4474409F5DB73265CA857538664BDC85900F76DAB2E8BBAD9E5397A080CB6313DE6F36D55B4935A6923810C36357ACAB20E0DEA01FD447090507BEF9904C161357B2D3E36DB9661ACBBFBB6658263657619506DDC4DDFBA6B18AA3B04185960CB2E43A6716230561855C94E1AA3888AE97D9E6DE26DBE76BC2A82557619B7D6DE0C7247865EACD336E7D3C36CBA88589A8E589D564FD42138FD325D108763DC3B8E461764B1F13BDD0EB3C9D89D9252127FFE547F010412EF5537DB4225EDAF6EDC475F9C11FD6680F9B41FC799FE8C7873773599CE0D6787445512E7B2CBD23ACC76AA0AA5519897F64D9BEBC6ACE8E10574EBE7B3DE48C23FD420AB2BB238550CBA2EA7E8961BB7802C6ED00E5B87D96E6E51F238125D00A8C7731E3ED6E3A1CADA9BA5A3B7822230842F008469688C285593F99012C53B8DE9985B2F685489B015B1900ADE5C221F206D0FBFAA5E70CFC55F6F83CCDF04BE877F9D2F8E8F8E4E38BE808F045344B9349AF2371C590C1594E413B91B5CC6519A25AECF8772DE247EE4F91B37E07BC464D55C86E4BC6E88B229AFD10645F9E202E8AF4E955058F7D9B2A1CE08848A1154F4921C1D06B1A0C2C7B1A911253FD38379C2C5A77D88CA958673E1958146976EEAB96B5EC8F2182D753BB82585B85D7CB64140277D37A077D0E907039BADA426C49F28E08F1877E968ABC6F82BC3A21526A645A46CC13E122EF523A5FB99ED060225BC4297B40D56E33D41D26696EC77623654D08A18F7C9F0A850937399A6E789C27127E96E009C748EA6A3ADDB2DF0AEE9C136609C6B1091B4571A4FF6DEE71CD51CE93FD6F34E75A8651FE9F14669592A610FF6B68A1BB767B6B1657C792B9F5378AAB419C68120C5BA2153F866D386991A4D87BA23B4D40F2608A644F04D8151F0455847DB2026585BD90FA9CCBC469A684992D4F761548FC588750489FCF52881FA91BDD1343A46E8F822102894BF2B39A474C22E4044714BFEE4F8503F00351E481A87D5F228008487C5680E3449317EB65C6388A441D0653ADA7D804B76E1BEF679D604BAA78E6F3D689DE9B58EECA9BFD18171988CE6028B394C4215280E9A621E9098544B985C164ADAD9D81B51284B1B97388EED4FE2D7226BDEF008D47896B97FB3A0FE1DB2621BA1E2BED709B1A9380D99CFDA79BE881C7955DD158C33586273A15B6CA4C910A7240AAF2B20A68C03BD20CBBE9C7E683F26C5D7ACF1EACF94F0DA2903C18C403885C1C00E80D36AB5A95C45014DB8670EA2BBE41B0A2820E9A4663C8A3B3695EDCC2C36E2D455B6AA7908A1397E611E2DE03093975AA14CE865B270CABF258E1AE52308E78BF57D8CF1507ACA7FBCAB73716F7A892B248129AE91CC21A9F2E7E22539559DA476E4AA2313C5355D96EFD2AB6A215DA7B85AC844712DD5C3338A4A78F755AE2A3E8BB8C21BF2A923D5A87146047ED8B82CC0B835F9D4D552EB27AE462A555C59FDA68B0A20EC61308F12360700952A9B165E281F071E3154328099EA39775555B49990AB8A4E165755BFDEAD3564C4319478D4880C92812B1E6BD6AA503011892B16649434807A6157D510A95253EB333D554647FCF2F530E9E2AA9AF7F9F4559A86DE916586559E9116827D5555B3885AFF3605F414B1D44AA4548EBAAA4BA62CE9B7926471670E9155CC1EC1A603DC76349CA03F734B1E89CD8520C1A5B19B5DBA9B1A2C900757097861108D45758BC71FF34AA094296AD952BD393818AB2A93AE3EABC42F85494387882EAA3A363BB649C35434840D0E6BE94B6C647400D84A720DC4301866262F12F62690336193C8E51F6291323C60383C717BC6960C91D45D4371AEE922AD24F75FEF712613ADD94B8C51099DBB0DF8510BFAAEE371DDBD0B340BC5BBA5928F6C5A6756885D7E059CD0F00DEEAB1BB0F19FA0417DEF950D8C57AB8217321F58AA23A25D62D1133A611EAC607D372126487D3CBB369E2FCFED7C5B124452AF6868FC0C153810FB23EE2E02AA6EE909C17E81BFEA94CEA8EFC9882B3CA3440B24A38797A5DE54E402874B942D94D43602E50BD3C3B14EB2FC367A10BA47153A0F86697A98408267E89B32C8125D6E146DC744906528F6C9A7692D8F8BFEA7EB8958A461A01BCB360780AD578B9CEC485B1F100AD131EEC8E868E01EAF6FD2CE96A50DB8FA807F728FD49F2D6FB7517EBB64F9EB354AFDC796C419A61995EF3DB544EB3C57D1435C1F55332DAAB3B06F9FA1CC5DBB997B9164FE83EB6538D94369EA478F0BA7B846337F7BF91EADAFA20FDB6CB3CD709751781F50CCC88FBC65F59F2DB9369F7D281E404AFBE8026EA69F5FC8F921CA1F835937ED7E2BB8D50D20919FA557B79AE66399E59BA8C72F0DA5F771A449A8625FE302F011859B00134B3F442BF713B2691B86F53BF4E87A5FF0F74FFE3A172488887A2068B69FBDF6DDC7C40DD38A465B1EFFC4185E87CFDFFF1F02742C284F380100 , N'6.2.0-61023')
+
+2019-08-28 23:02:59,605 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,731 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 126 ms with result: 1
+
+2019-08-28 23:02:59,731 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,744 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Committed transaction at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,792 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Opened connection at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,793 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Started transaction at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,886 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句INSERT [dbo].[T_Cities]([Name], [CreateDateTime], [IsDeleted])
+VALUES (@0, @1, @2)
+SELECT [Id]
+FROM [dbo].[T_Cities]
+WHERE @@ROWCOUNT > 0 AND [Id] = scope_identity()
+2019-08-28 23:02:59,886 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,888 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- @0: 'fhds' (Type = String, Size = 20)
+
+2019-08-28 23:02:59,888 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- @1: '2019/8/28/周三 23:02:38' (Type = DateTime2)
+
+2019-08-28 23:02:59,888 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- @2: 'False' (Type = Boolean)
+
+2019-08-28 23:02:59,888 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Executing at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,914 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句-- Completed in 24 ms with result: SqlDataReader
+
+2019-08-28 23:02:59,914 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句
+
+2019-08-28 23:02:59,931 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Committed transaction at 2019/8/28/周三 23:02:59 +08:00
+
+2019-08-28 23:02:59,931 [12] DEBUG ZSZ.Service.MyContext - EF开始执行sql语句Closed connection at 2019/8/28/周三 23:02:59 +08:00
+

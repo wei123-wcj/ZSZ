@@ -1,0 +1,6 @@
+E:\Desktop\掌上组\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.dll
+E:\Desktop\掌上组\ZSZ\ZSZ.DTO\bin\Debug\ZSZ.DTO.pdb
+E:\Desktop\掌上组\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csproj.CoreCompileInputs.cache
+E:\Desktop\掌上组\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.dll
+E:\Desktop\掌上组\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.pdb
+E:\Desktop\掌上组\ZSZ\ZSZ.DTO\obj\Debug\ZSZ.DTO.csprojAssemblyReference.cache
