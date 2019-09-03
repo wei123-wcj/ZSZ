@@ -13,5 +13,8 @@ namespace ZSZ.IService
         long GetTotalCount();
         RoleDTO GetById(long id);
         bool MarkDeleted(long id);
+        long Insert(string name);
+        void RolePer(long Rid, long[] DesId);
+        void Update(long Id, string name, long[] DesId);
     }
 }

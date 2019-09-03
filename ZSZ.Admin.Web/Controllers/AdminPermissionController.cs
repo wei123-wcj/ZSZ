@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ZSZ.Admin.Web.Models;
+using ZSZ.DTO;
 using ZSZ.IService;
 using ZSZ.Service;
 
@@ -25,24 +27,24 @@ namespace ZSZ.Admin.Web.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(PermissionEntity p)
+        public ActionResult Add(PermissionAdd p)
         {
-            PermissionEntity per = new PermissionEntity
+
+            if (ModelState.IsValid)
             {
-                Name = p.Name,
-                Description = p.Description
-            };
-            using (MyContext my = new MyContext() )
-            {
-                my.Permissions.Add(per);
-                int b= my.SaveChanges();
-                if (b>0)
-                {
-                    ViewData["count"] = Permission.GetTotalCount();
-                    return Json(b);
-                }
+                //说明校验通过
+                
+                var id = Permission.Insert(p.Name, p.Description);
+                //AJAX请求必须返回json数据
+               
+
+                return Json("ok");
             }
-            return View();
+
+            else
+            {
+                return Json("no");
+            }
         }
         //删除权限
         [HttpPost]
@@ -77,29 +79,23 @@ namespace ZSZ.Admin.Web.Controllers
             return View(permission);
         }
         [HttpPost]
-        public ActionResult Update(PermissionEntity p)
+        public ActionResult Update(PermissionEdit p)
         {
-            using (MyContext my = new MyContext())
+            if (ModelState.IsValid)
             {
-                var permission = my.Permissions.Find(p.Id); //Permission.GetById(p.Id);
-                permission.Name = p.Name;
-                permission.Description = p.Description;
-                int b = my.SaveChanges();
-                if (b > 0)
-                {
-                    ViewData["count"] = Permission.GetTotalCount();
-                    return Json("ok");
-                }
-                else
-                {
-                    return Json("no");
-                }
+                Permission.Update(p.Id, p.Name, p.Description);
+                return Json( "ok" );
+            }
+            else
+            {
+                return Json("no");
             }
         }
         [HttpPost]
         public ActionResult Index(string name)
         {
-            var permission = Permission.GetAll().Where(m=>m.Name.Contains(name)).ToArray();
+            var permission = Permission.GetAll().Where(m=>m.Name.Contains(name)).ToArray(); 
+            ViewData["count"] = Permission.GetTotalCount();
             return View(permission);
         }
     }

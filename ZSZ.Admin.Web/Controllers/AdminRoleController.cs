@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ZSZ.Admin.Web.Models;
 using ZSZ.IService;
 using ZSZ.Service;
 
@@ -11,6 +12,7 @@ namespace ZSZ.Admin.Web.Controllers
     public class AdminRoleController : Controller
     {
         public IRoleService Irole { get; set; }
+        public IPermissionService Permission { get; set; }
         // GET: AdminRole
         //查询全部角色
         public ActionResult Index()
@@ -22,24 +24,21 @@ namespace ZSZ.Admin.Web.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            return View();
+            var data = Permission.GetAll();
+            return View(data);
         }
         [HttpPost]
-        public ActionResult Add(RoleEntity role)
+        public ActionResult Add(RoleAdd role)
         {
-            using (MyContext my=new MyContext())
+            if(ModelState.IsValid)
             {
-                my.Roles.Add(role);
-                int i = my.SaveChanges();
-                if(i>0)
-                {
-                    ViewBag.Tocount = Irole.GetTotalCount();
-                    return Json("ok");
-                }
-                else
-                {
-                    return Json("no");
-                }
+                var id= Irole.Insert(role.Name);
+                Irole.RolePer(id, role.DesId);
+                return Json("ok");
+            }
+            else
+            {
+                return Json("no");
             }
         }
         //修改角色
@@ -50,24 +49,18 @@ namespace ZSZ.Admin.Web.Controllers
             return View(data);
         }
         [HttpPost]
-        public ActionResult Update(RoleEntity role)
+        public ActionResult Update(RoleEdit role)
         {
-            using (MyContext my=new MyContext())
+           if(ModelState.IsValid)
             {
-                var data = my.Roles.Find(role.Id);
-                data.Name = role.Name;
-                int i = my.SaveChanges();
-                if(i>0)
-                {
-                    ViewBag.Tocount = Irole.GetTotalCount();
-                    return Json("ok");
-                }
-                else
-                {
-                    return Json("no");
-                }
+                Irole.Update(role.Id, role.Name,role.DesId);
+                return Json("ok");
             }
-           
+            else
+            {
+                return Json("no");
+            }
+
         }
         //删除角色
         [HttpPost]

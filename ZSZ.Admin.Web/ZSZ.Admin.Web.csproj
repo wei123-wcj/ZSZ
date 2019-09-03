@@ -1405,6 +1405,10 @@
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\PathFormater.cs" />
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\UploadHandler.cs" />
+    <Compile Include="Models\PermissionAdd.cs" />
+    <Compile Include="Models\PermissionEdit.cs" />
+    <Compile Include="Models\RoleAdd.cs" />
+    <Compile Include="Models\RoleEdit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1524,7 +1528,6 @@
     <Folder Include="lib\Highcharts\4.1.7\exporting-server\java\highcharts-export\highcharts-export-convert\target\surefire\" />
     <Folder Include="lib\Highcharts\4.1.7\exporting-server\java\highcharts-export\highcharts-export-web\target\generated-sources\annotations\" />
     <Folder Include="lib\Highcharts\4.1.7\exporting-server\java\highcharts-export\highcharts-export-web\target\surefire\" />
-    <Folder Include="Models\" />
     <Folder Include="template\common\" />
     <Folder Include="template\detail\" />
     <Folder Include="template\help\" />

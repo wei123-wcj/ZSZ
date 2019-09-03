@@ -11,10 +11,10 @@ namespace ZSZ.Service
 {
     public class PermissionService : IPermissionService
     {
-       
+
         public PermissionDTO[] GetAll()
         {
-            using (MyContext my=new MyContext())
+            using (MyContext my = new MyContext())
             {
                 BaseService<PermissionEntity> bs = new BaseService<PermissionEntity>(my);
                 return bs.GetAll().AsNoTracking().ToList().Select(m => GetDTO(m)).ToArray();
@@ -27,7 +27,6 @@ namespace ZSZ.Service
             {
                 BaseService<PermissionEntity> bs = new BaseService<PermissionEntity>(my);
                 return GetDTO(bs.GetById(id));
-                //return GetAll().Where(m => m.Id == id).FirstOrDefault();
             }
            
         }
@@ -39,7 +38,6 @@ namespace ZSZ.Service
                 BaseService<PermissionEntity> bs = new BaseService<PermissionEntity>(my);
                 return bs.GetTotalCount();
             }
-            //return GetAll().Length;
         }
 
         public bool MarkDeleted(long id)
@@ -50,20 +48,16 @@ namespace ZSZ.Service
                 return bs.MarkDeleted(id);
             }
         }
-        public bool Insert(PermissionEntity permission)
+        public long Insert(string name,string des)
         {
             using (MyContext my = new MyContext())
             {
-                 my.Permissions.Add(permission);
+                PermissionEntity p = new PermissionEntity();
+                p.Description = des;
+                p.Name = name;
+                my.Permissions.Add(p);
                 int b = my.SaveChanges();
-                if(b>0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return p.Id;
             }
         }
         //PermissionEntity转换PermissionDTO
@@ -77,6 +71,24 @@ namespace ZSZ.Service
                 CreateDateTime = p.CreateDateTime
             };
             return d;
+        }
+        public void Update(long id,string name,string des)
+        {
+            using (MyContext my = new MyContext())
+            {
+                BaseService<PermissionEntity> permissionService = new BaseService<PermissionEntity>(my);
+                var perModel = permissionService.GetById(id);//先查出来
+                if (perModel == null)
+                {
+                    throw new Exception("id不存在");
+                }
+                else
+                {
+                    perModel.Name = name;
+                    perModel.Description = des;
+                    my.SaveChanges();//在更新
+                }
+            }
         }
     }
 }

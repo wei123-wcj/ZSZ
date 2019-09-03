@@ -13,5 +13,7 @@ namespace ZSZ.IService
         long GetTotalCount();
         PermissionDTO GetById(long id);
         bool MarkDeleted(long id);
+        long Insert(string name,string des);
+        void Update(long id, string name, string des);
     }
 }

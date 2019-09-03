@@ -9,6 +9,6 @@ namespace ZSZ.DTO
    public class RoleDTO:BaseDTO
     {
         public string Name { get; set; }
-        public PermissionDTO Permission { get; set; }
+        public PermissionDTO[] Permission { get; set; }
     }
 }

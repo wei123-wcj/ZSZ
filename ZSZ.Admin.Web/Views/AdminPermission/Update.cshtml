@@ -64,15 +64,16 @@
                     data: data,
                     dataType: "json",
                     success: function (res) {
-                        if (res != 0) {
+                        if (res == "ok") {
+                              layer.msg('修改成功!', { icon: 1, time: 1000 });
                             window.parent.location.reload();
                         }
                         else {
-                            alert('修改失败');
+                            layer.msg('修改失败!', { icon: 2, time: 1000 });
                         }
                     },
                     error: function (org) {
-                        alert('网络异常');
+                        layer.msg('服务器异常!', { icon: 2, time: 1000 });
                     }
                 })
             })

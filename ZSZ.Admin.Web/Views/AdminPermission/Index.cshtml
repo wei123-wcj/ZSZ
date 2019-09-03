@@ -115,11 +115,11 @@
                            layer.msg('已删除!', { icon: 1, time: 1000 });
                         }
                         else {
-                            alert('删除失败');
+                             layer.msg('删除失败!', { icon: 2, time: 1000 });
                         }
                     },
                     error: function (org) {
-                        alert('网络异常');
+                         layer.msg('服务器异常!', { icon: 2, time: 1000 });
                     }
                 })
                 
@@ -141,11 +141,11 @@
                             window.parent.location.reload();
                         }
                         else {
-                            alert('删除失败');
+                          layer.msg('删除失败!', { icon: 2, time: 1000 });
                         }
                     },
                     error: function (org) {
-                        alert('网络异常');
+                         layer.msg('服务器异常!', { icon: 2, time: 1000 });
                     }
                 })
             });
